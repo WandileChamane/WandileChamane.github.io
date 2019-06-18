@@ -1,2 +1,2 @@
-# wandile.github.io
+# wandilechamane.github.io
 African Developer
