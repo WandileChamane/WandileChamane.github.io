@@ -55,19 +55,23 @@ blockquote {
 /* Header name styling */
 
 header {
-	background: #68B6E3;
-	padding: 50px;
-	margin-bottom: 50px;
+    background: #68B6E3;
+    padding: 136px 50px 7px 50px;
+    margin-bottom: 50px;
+    opacity: inherit;
+    margin-top: -249px;
+    height: 170px;
+    color: black;
 }
 
 header h1 {
-	color: #FFFFFF;
+	color: #000;
 	max-width: 700px;
 	margin: 0 auto;
 }
 
 header h2 {
-	color: #F3F3F3;
+	color: #000;
 	font-size: 1em;
 	max-width: 700px;
 	margin: 0 auto;
@@ -209,16 +213,65 @@ header h2 {
 	clear: both;
 }
 
+.header-bg {
+  font: 900 100px/0.65 system-ui;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  height:250px;
+}
+.header-bg span {
+  display: inline-block;
+  text-indent: -2rem;
+  position: relative;
+}
+
+
+
+
 /* End styling */
 
-	</style>
+    </style>
+    
+    <script src="https://unpkg.com/css-doodle@0.9.1/css-doodle.min.js"></script>
+
 	
 	</head>
 	<body>
-	
+        <div class="header-bg">
+                
+        <css-doodle>
+                :doodle { 
+                    @grid: 15 / 100vmax;
+                    background: #fff;
+                    cursor: pointer;
+                
+                    }
+                    :doodle(:hover) { --s: 1 ; }
+                
+                    :after {
+                    content: @pick(c,W,a);
+                    font-size: 4vmax;
+                    color: #000;
+                    transform: scale(@rand(.2, .9));
+                
+                }
+                    
+                    transition: .5s cubic-bezier(.175, .885, .32, 1.275);
+                    transition-delay: @rand(650ms);
+                transform: translateY(calc(var(--s) * 100%)) rotate(calc(var(--s) * 360deg));
+                
+                    
+        </css-doodle>
+        </div>
 	<header>
 	<h1>
-	  <img width="90" height="90" style="border-radius: 60px;" src="https://s.gravatar.com/avatar/6ca97868f28b715e4c3ab91a2738d50e?s=255">
+	  <img width="90" height="90" style="  
+    border-radius: 60px;
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+      " src="https://s.gravatar.com/avatar/6ca97868f28b715e4c3ab91a2738d50e?s=255">
 	</h1>
 	<h1>
 	Wandile Chamane
@@ -667,7 +720,7 @@ header h2 {
 				— Tshegofatso
 			</div>
 			<blockquote class="level">
-				<em>Senior Software Developer (Back End) | Qualica</em>
+				<em>Senior Software Developer | Qualica</em>
 			</blockquote>
 			<blockquote class="level">
 				
@@ -682,7 +735,7 @@ header h2 {
 				— Sean
 			</div>
 			<blockquote class="level">
-				<em>Senior Software Developer (Front End) | Qualica</em>
+				<em>Senior Software Developer | Qualica</em>
 			</blockquote>
 			<blockquote class="level">
 				
